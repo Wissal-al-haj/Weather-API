@@ -1,25 +1,99 @@
-.app {
-  height: 100vh;
-  width: 100vw;
-  transition: background-color 1s ease-in;
-}
-
-.app__header,
-.app__main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /*  Search bar */
-
-/* Current weather */
-
-div {
-  border: 5px solid red;
+*{
+  font-family: "Raleway", sans-serif;
 }
+body{
+  margin: 0 auto;
+  padding: 0;
+  background: rgb(101, 163, 221);
+  text-align: center;
+}
+.container-header{
+  padding: 2rem;
+  background-color: rgb(100, 109, 236);
+  text-align: left;
+}
+/* Current weather */
+.weather-today{  
+  margin: auto;
+  padding: 2rem;
+  line-height: 1.4rem;
+  color:rgb(10, 10, 73);
+  width:250px;
+  line-height:2rem;
+}
+
+span{
+  font-weight:bold;
+} 
+.change-sizing{
+font-size: 12px;
+word-spacing: 8px;
+}
+.spacing{
+  margin-right: 10px;
+}
+.week-weather{
+  padding:0rem 10rem 0rem 10rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  }
+
+time{
+  display: grid;
+  grid-template-columns:1fr;
+  
+}
+button{
+  font-size: 1.5rem;
+  font-family: 'Raleway';
+  font-size: 1rem;
+  background:  rgb(100, 109, 236);
+  padding:20px;
+  margin-left: 20px;
+}
+input{
+  padding: 10px;
+  font-size: 1.5rem;
+  font-family: 'Raleway';
+  font-size: 1rem;
+  background:  rgb(100, 109, 236);
+  padding:20px;
+  border:none;
+  border-bottom: solid black 1px;
+}
+.overcast{color: white;}
+@media (max-width:720px) {
+
+  .app {
+    justify-content: center;
+  }
+  button{
+    margin-top: 10px;
+  }
+  input {
+    width: 70%;
+  }
+  
+  .container-header {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0%;
+    width: 90%;
+    margin-bottom: 50px;
+    height: auto;
+  }
+  .grid-container div {
+    width: 50%;
+  }
+  
+  .week-weather{
+  display: grid;
+  grid-template-rows: repeat(7,1fr);
+  gap: 1rem;
+  justify-content: space-around;
+  }
+
+
+} 
